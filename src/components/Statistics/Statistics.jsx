@@ -1,24 +1,27 @@
 import PropTypes from 'prop-types';
 import { StatisticCard } from 'components/StatisticCard/StatisticCard';
+import { Title, StatsWrapper, StatList } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <>
-      {title && <h1>{title}</h1>}
+    <StatsWrapper>
+      {title && <Title>{title}</Title>}
 
-      {stats.map(stat => (
-        <StatisticCard
-          key={stat.id}
-          label={stat.label}
-          percentage={stat.percentage}
-        />
-      ))}
-    </>
+      <StatList>
+        {stats.map(stat => (
+          <StatisticCard
+            key={stat.id}
+            label={stat.label}
+            percentage={stat.percentage}
+          />
+        ))}
+      </StatList>
+    </StatsWrapper>
   );
 };
 
 Statistics.propTypes = {
-    title: PropTypes.string,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
