@@ -20,7 +20,7 @@ export const Status = styled.span`
   height: 15px;
   margin-right: 15px;
   border-radius: 50%;
-  background-color: black;
+  background-color: ${props => (props.status ? 'green' : 'red')};
 `;
 
 export const FriendsImg = styled.img`

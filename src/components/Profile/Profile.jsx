@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { CardWrapper, Card, ProfileImg, Name, Text } from './Profile.styled';
-import { ProfileStats } from 'components/Profile.Stats/Profile.Stats';
+import { ProfileStats } from 'components/ProfileStats/ProfileStats';
 
 export const Profile = props => {
   const {

@@ -9,9 +9,7 @@ import {
 export const FriendsCard = ({ avatar, name, isOnline }) => {
   return (
     <FriendItem>
-      <Status style={{ backgroundColor: isOnline ? 'green' : 'red' }}>
-        {isOnline}
-      </Status>
+      <Status status={isOnline}></Status>
       <FriendsImg src={avatar} alt="User avatar" width="48" />
       <FriendName>{name}</FriendName>
     </FriendItem>
